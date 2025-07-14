@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-app.get("/",(req,res)=>{
+app.get("/api/notes ",(req,res)=>{
     res.send(
         `<h1>sajalgit </h1>`
     )
