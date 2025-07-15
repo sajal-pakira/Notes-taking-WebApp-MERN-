@@ -8,3 +8,16 @@ export const createNote = (req, res) => {
     success: true,
   });
 };
+export const updateNote = (req, res) => {
+  res.status(201).json({
+    message: "Notes updated successfully",
+    success: true,
+  });
+};
+
+export const deleteNote = (req, res) => {
+  res.status(201).json({
+    message: "Notes deleted successfully",
+    success: true,
+  });
+};
