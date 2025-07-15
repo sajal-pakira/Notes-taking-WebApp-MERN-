@@ -1,7 +1,8 @@
 import express from "express";
-
+import notesRoutes from "./routes/notes.routes";
 const app = express();
 
+app.use("/api/notes", notesRoutes);
 app.get("/api/notes", (req, res) => {
   res.send(`<h1>sajal</h1>`);
 });
