@@ -1,9 +1,9 @@
 import express from "express";
+import { createNote, getAllNotes } from "../controllers/notes.controller";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.status(200).send("You just fetched the notes");
-});
+router.get("/", getAllNotes);
+router.post("/", createNote);
 
 export default router;
