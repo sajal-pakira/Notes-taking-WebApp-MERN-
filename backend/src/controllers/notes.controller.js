@@ -15,11 +15,14 @@ export const getAllNotes = async (req, res) => {
   }
 };
 
-export const createNote = (req, res) => {
-  res.status(201).json({
-    message: "Notes created successfully",
-    success: true,
-  });
+export const createNote = async (req, res) => {
+  try {
+    const {title,content} = req.body;
+    // res.status(201).json({
+    //   message: "Notes created successfully",
+    //   success: true,
+    // });
+  } catch (error) {}
 };
 export const updateNote = (req, res) => {
   res.status(201).json({
