@@ -19,11 +19,12 @@ export const createNote = async (req, res) => {
   try {
     const { title, content } = req.body;
     const newNote = new Note({ title, content });
+    await newNote.save();
     res.status(201).json({
       message: "Notes created successfully",
       success: true,
     });
-  } catch (error) {
+  } catch (err) {
     console.log("error in createNote controller :- ", err);
     res.status(500).json({
       success: false,
