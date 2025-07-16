@@ -17,6 +17,7 @@ export const getAllNotes = async (req, res) => {
 
 export const createNote = async (req, res) => {
   try {
+    console.log("Received body:", req.body);
     const { title, content } = req.body;
     const newNote = new Note({ title, content });
     await newNote.save();

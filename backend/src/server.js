@@ -10,6 +10,11 @@ const port = process.env.PORT || 5001;
 
 connectDB();
 
+app.post("/api/notes", (req, res, next) => {
+  console.log("Middleware body check:", req.body); // ✅ Should log your note body
+  next();
+});
+
 app.use("/api/notes", notesRoutes);
 //Middleware
 app.use(express.json());
@@ -18,4 +23,4 @@ app.listen(port, () => {
   console.log("Server is running on PORT : ", port);
 });
 
-//
+
