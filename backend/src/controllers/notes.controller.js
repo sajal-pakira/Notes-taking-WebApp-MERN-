@@ -86,3 +86,11 @@ export const deleteNote = async (req, res) => {
     });
   }
 };
+
+export const getNoteById = async(req,res)=>{
+  try {
+    
+  } catch (error) {
+    
+  }
+}
