@@ -40,11 +40,15 @@ export const updateNote = async (req, res) => {
     if (!title && !content) {
       res.send("Title or content must be given to update");
     }
-    const updatedNote = await Note.findOneAndUpdate(req.params.id);
+    const updatedNote = await Note.findOneAndUpdate(req.params.id, {
+      title,
+      content,
+    });
 
     res.status(201).json({
       message: "Notes updated successfully",
       success: true,
+      updatedNote,
     });
   } catch (error) {
     console.log("error in updateNote controller :- ", err);
