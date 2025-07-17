@@ -40,7 +40,8 @@ export const updateNote = async (req, res) => {
     if (!title && !content) {
       res.send("Title or content must be given to update");
     }
-    const updatedNote = await Note.findOneAndUpdate(req.params.id, {
+    const note = await Note.findById(req.params.id);
+    const updatedNote = await note.updateOne({
       title,
       content,
     });
@@ -57,7 +58,7 @@ export const updateNote = async (req, res) => {
       success: true,
       updatedNote,
     });
-  } catch (error) {
+  } catch (err) {
     console.log("error in updateNote controller :- ", err);
     res.status(500).json({
       success: false,
