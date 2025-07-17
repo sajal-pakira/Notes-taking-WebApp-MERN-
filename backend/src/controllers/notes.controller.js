@@ -87,10 +87,17 @@ export const deleteNote = async (req, res) => {
   }
 };
 
-export const getNoteById = async(req,res)=>{
+export const getNoteById = async (req, res) => {
   try {
-    
-  } catch (error) {
-    
-  }
-}
+    const note = await Note.findById(req.params.id);
+    if (!note)
+      return res.status(400).json({
+        success: false,
+        message: "Note not found",
+      });
+    res.status(200).json({
+      success: true,
+      note,
+    });
+  } catch (error) {}
+};
