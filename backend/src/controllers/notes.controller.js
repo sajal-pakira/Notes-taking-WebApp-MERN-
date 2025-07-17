@@ -47,7 +47,7 @@ export const updateNote = async (req, res) => {
     });
 
     if (!updatedNote) {
-      res.status(400).json({
+      res.status(404).json({
         message: "title or content not found or userid is not given",
         success: false,
       });
