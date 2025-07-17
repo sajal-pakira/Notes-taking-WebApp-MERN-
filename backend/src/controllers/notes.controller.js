@@ -68,13 +68,21 @@ export const updateNote = async (req, res) => {
 };
 
 export const deleteNote = async (req, res) => {
-  const note = await Note.findById(req.params.id);
-  if (!note) {
-    req.send("Note not found");
+  try {
+    const note = await Note.findById(req.params.id);
+    if (!note) {
+      req.send("Note not found");
+    }
+    const deletedNote = await note.deleteOne();
+    res.status(200).json({
+      message: "Notes deleted successfully",
+      success: true,
+    });
+  } catch (error) {
+    console.log("error in deleteNote controller :- ", err);
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
   }
-  const deletedNote = await note.deleteOne();
-  res.status(200).json({
-    message: "Notes deleted successfully",
-    success: true,
-  });
 };
