@@ -34,11 +34,25 @@ export const createNote = async (req, res) => {
     });
   }
 };
-export const updateNote = (req, res) => {
-  res.status(201).json({
-    message: "Notes updated successfully",
-    success: true,
-  });
+export const updateNote = async (req, res) => {
+  try {
+    const { title, content } = req.body;
+    if (!title && !content) {
+      res.send("Title or content must be given to update");
+    }
+    const updatedNote = await Note.findOneAndUpdate(req.params.id);
+
+    res.status(201).json({
+      message: "Notes updated successfully",
+      success: true,
+    });
+  } catch (error) {
+    console.log("error in updateNote controller :- ", err);
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
 };
 
 export const deleteNote = (req, res) => {
