@@ -73,7 +73,7 @@ export const deleteNote = async (req, res) => {
     req.send("Note not found");
   }
   const deletedNote = await note.deleteOne();
-  res.status(201).json({
+  res.status(200).json({
     message: "Notes deleted successfully",
     success: true,
   });
