@@ -1,7 +1,7 @@
 import Note from "../models/note.model.js";
 export const getAllNotes = async (req, res) => {
   try {
-    const note = await Note.find();
+    const note = await Note.find().sort({ createAt: -1 }); //newest first
     res.status(200).json({
       success: true,
       note,
@@ -100,7 +100,7 @@ export const getNoteById = async (req, res) => {
       note,
     });
   } catch (err) {
-    onsole.log("error in getNoteById controller :- ", err);
+    onsole.log("Error in getNoteById controller :- ", err);
     res.status(500).json({
       success: false,
       message: "Internal server error",
