@@ -99,8 +99,8 @@ export const getNoteById = async (req, res) => {
       success: true,
       note,
     });
-  } catch (error) {
-    onsole.log("error in deleteNote controller :- ", err);
+  } catch (err) {
+    onsole.log("error in getNoteById controller :- ", err);
     res.status(500).json({
       success: false,
       message: "Internal server error",
