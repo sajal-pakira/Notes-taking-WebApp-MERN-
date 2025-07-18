@@ -6,7 +6,7 @@ dotenv.config();
 //create a ratelimiter that allows 15 requests per 20 seconds
 const ratelimit = Ratelimit({
   redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(15, "20 s"),
+  limiter: Ratelimit.slidingWindow(100, "60 s"),
 });
 
 export default ratelimit;
