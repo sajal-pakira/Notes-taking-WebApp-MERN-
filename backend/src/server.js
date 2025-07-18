@@ -14,6 +14,7 @@ connectDB();
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(`Req method is ${req.method} & req url is ${req.url}`);
+  next();
 });
 app.use(express.urlencoded({ extended: true }));
 
