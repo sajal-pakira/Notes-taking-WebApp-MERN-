@@ -9,8 +9,6 @@ const app = express();
 const port = process.env.PORT || 5001;
 // console.log(process.env.MONGO_URI);
 
-connectDB();
-
 //Middleware
 app.use(express.json()); // it parse json
 app.use(rateLimiter);
@@ -23,6 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/notes", notesRoutes);
 
-app.listen(port, () => {
-  console.log("Server is running on PORT : ", port);
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log("Server is running on PORT : ", port);
+  });
 });
