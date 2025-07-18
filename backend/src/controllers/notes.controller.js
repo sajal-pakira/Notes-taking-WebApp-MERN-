@@ -99,5 +99,11 @@ export const getNoteById = async (req, res) => {
       success: true,
       note,
     });
-  } catch (error) {}
+  } catch (error) {
+    onsole.log("error in deleteNote controller :- ", err);
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
 };
