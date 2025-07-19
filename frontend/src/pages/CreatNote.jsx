@@ -1,7 +1,5 @@
-const CreatNote = () => {
-  return (
-    <div>CreatNote</div>
-  )
-}
+const CreateNote = () => {
+  return <div>CreateNote</div>;
+};
 
-export default CreatNote
+export default CreateNote;
