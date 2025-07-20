@@ -36,7 +36,7 @@ const HomePage = () => {
       <NavBar />
       {isRateLimited && <RateLimitedUI />}
       <div className="max-w-7xl mx-auto p-4 mt-6">
-        {true && (
+        {loading && (
           <div className="text-center py-5 text-primary flex flex-col gap-3">
             <BarLoader
               color="#3b82f6"
