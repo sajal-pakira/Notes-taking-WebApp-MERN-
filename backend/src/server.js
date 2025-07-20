@@ -13,9 +13,9 @@ const port = process.env.PORT || 5001;
 // console.log(process.env.MONGO_URI);
 
 //Middleware
+app.use(cors());
 app.use(express.json()); // it parse json
 app.use(rateLimiter);
-app.use(cors());
 
 //custom middleware
 // app.use((req, res, next) => {
