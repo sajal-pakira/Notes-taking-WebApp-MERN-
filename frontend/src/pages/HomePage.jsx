@@ -7,7 +7,18 @@ const HomePage = () => {
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const fetchNotes = async () => {
+      try {
+        const res = await fetch("http://localhost5001:api/notes");
+        const data = await res.json();
+        console.log(data);
+      } catch (error) {
+        console.log("Error fetchin notes :- ", error);
+      }
+    };
+    fetchNotes();
+  }, []);
 
   return (
     <div className="min-h-screen">

@@ -7,7 +7,7 @@ export const getAllNotes = async (req, res) => {
       note,
     });
   } catch (err) {
-    console.log("error in getAllNotes controller :- ", err);
+    console.log("Error in getAllNotes controller :- ", err);
     res.status(500).json({
       success: false,
       message: "Internal server error",
