@@ -16,10 +16,12 @@ const HomePage = () => {
         const res = await axios.get("http://localhost:5001/api/notes");
         console.log("data :- ", res.data);
         setNotes(res.data);
+        console.log("Notes :- ", notes);
+
         setIsRateLimited(false);
       } catch (error) {
         console.log("Error fetching notes :- ", error);
-        if (error.response.status === 429) {
+        if (error.response?.status === 429) {
           setIsRateLimited(true);
         } else {
           toast.error("Failed to load notes");
@@ -48,7 +50,13 @@ const HomePage = () => {
           </div>
         )}
         {notes.length > 0 && !isRateLimited && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {notes.map((note) => (
+              <div>
+                {note.title} {note.content}
+              </div>
+            ))}
+          </div>
         )}
       </div>
     </div>
