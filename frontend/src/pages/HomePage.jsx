@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import { Plus } from "lucide-react";
+
 const HomePage = () => {
   return (
     <header className="bg-base-300 border-b border-base-content/10">
@@ -9,6 +11,7 @@ const HomePage = () => {
           </h1>
           <div className="flex items-center gap-4">
             <Link to={"/create"} className="btn btn-primary">
+              <Plus />
               Create new note
             </Link>
           </div>
