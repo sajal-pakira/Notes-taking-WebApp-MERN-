@@ -37,13 +37,14 @@ const HomePage = () => {
       {isRateLimited && <RateLimitedUI />}
       <div className="max-w-7xl mx-auto p-4 mt-6">
         {true && (
-          <div className="text-center py-5 text-primary">
+          <div className="text-center py-5 text-primary flex flex-col gap-3">
             <BarLoader
               color="#3b82f6"
               height={5}
               width="100%"
               speedMultiplier={1}
             />
+            Notes Loading...
           </div>
         )}
       </div>
