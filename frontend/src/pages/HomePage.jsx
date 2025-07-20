@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import RateLimitedUI from "../components/RateLimitedUI";
 import toast from "react-hot-toast";
 import { BarLoader } from "react-spinners";
+import NoteCard from "../components/NoteCard";
 
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
