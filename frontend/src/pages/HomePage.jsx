@@ -3,6 +3,7 @@ import axios from "axios";
 import NavBar from "../components/NavBar";
 import RateLimitedUI from "../components/RateLimitedUI";
 import toast from "react-hot-toast";
+import { BarLoader } from "react-spinners";
 
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
@@ -34,6 +35,18 @@ const HomePage = () => {
     <div className="min-h-screen">
       <NavBar />
       {isRateLimited && <RateLimitedUI />}
+      <div className="max-w-7xl mx-auto p-4 mt-6">
+        {true && (
+          <div className="text-center py-5 text-primary">
+            <BarLoader
+              color="#3b82f6"
+              height={5}
+              width="100%"
+              speedMultiplier={1}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
