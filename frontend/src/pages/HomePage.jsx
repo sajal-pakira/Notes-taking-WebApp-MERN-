@@ -11,8 +11,8 @@ const HomePage = () => {
           </h1>
           <div className="flex items-center gap-4">
             <Link to={"/create"} className="btn btn-primary">
-              <Plus />
-              Create new note
+              <Plus className="size-5" />
+              <span>Create new note</span>
             </Link>
           </div>
         </div>
