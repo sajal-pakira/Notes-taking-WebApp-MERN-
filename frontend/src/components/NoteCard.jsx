@@ -9,6 +9,9 @@ const NoteCard = ({ note }) => {
       <div className="card-body">
         <h3 className="card-title text-base-content">{note.title}</h3>
         <p className="text-base-content/70 line-clamp-3">{note.content}</p>
+        <div className="card-actions flex justify-between items-center mt-4">
+          <span className="text-sm text-base-content/60">{note.createdAt}</span>
+        </div>
       </div>
     </Link>
   );
