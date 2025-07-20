@@ -47,6 +47,9 @@ const HomePage = () => {
             Notes Loading...
           </div>
         )}
+        {notes.length > 0 && !isRateLimited && (
+          <div className="grid grid-cols-1"></div>
+        )}
       </div>
     </div>
   );
