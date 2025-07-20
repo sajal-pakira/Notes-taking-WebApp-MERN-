@@ -22,7 +22,6 @@ app.use(cors());
 //   console.log(`Req method is ${req.method} & req url is ${req.url}`);
 //   next();
 // });
-app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/notes", notesRoutes);
 
