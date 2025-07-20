@@ -8,6 +8,7 @@ const NoteCard = ({ note }) => {
     >
       <div className="card-body">
         <h3 className="card-title text-base-content">{note.title}</h3>
+        <p>{note.content}</p>
       </div>
     </Link>
   );
