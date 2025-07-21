@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { SquarePenIcon } from "lucide-react";
 
 const NoteCard = ({ note }) => {
   return (
@@ -12,7 +13,7 @@ const NoteCard = ({ note }) => {
         <div className="card-actions flex justify-between items-center mt-4">
           <span className="text-sm text-base-content/60">{note.createdAt}</span>
           <div>
-            <PenSquareIcon/>
+            <SquarePenIcon />
           </div>
         </div>
       </div>
