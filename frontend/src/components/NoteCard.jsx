@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { SquarePenIcon, Trash2 } from "lucide-react";
-import { formatDate } from "../lib/utils";
+import { formatDate } from "../lib/utils.js";
 
 const NoteCard = ({ note }) => {
   return (
