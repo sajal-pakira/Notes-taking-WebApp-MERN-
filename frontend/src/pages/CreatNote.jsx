@@ -15,7 +15,7 @@ const CreateNote = () => {
         <div className="max-w-2xl mx-auto">
           <Link to={"/"} className="btn btn-ghost mb-6">
             <ArrowLeft className="size-5" />
-            back to notes
+            Back to Notes
           </Link>
         </div>
       </div>
