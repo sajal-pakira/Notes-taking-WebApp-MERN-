@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
+import toast from "react-hot-toast";
 
 const CreateNote = () => {
   const [title, setTitle] = useState("");
@@ -9,7 +10,10 @@ const CreateNote = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title);
+    if (!title.trim() || !content.trim()) {
+      toast.error("All fiels are required");
+      return;
+    }
   };
 
   return (
