@@ -19,7 +19,7 @@ const CreateNote = () => {
           </Link>
           <div className="card bg-base-100">
             <div className="card-body">
-              <h2 className="card-title text-2xl"></h2>
+              <h2 className="card-title text-2xl mb-4"></h2>
             </div>
           </div>
         </div>
