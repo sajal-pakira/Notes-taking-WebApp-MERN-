@@ -47,7 +47,12 @@ const CreateNote = () => {
                   />
                 </div>
                 <div className="card-actions justify-center">
-                  <button className="btn btn-outline btn-accent">Create</button>
+                  <button
+                    className="btn btn-outline btn-accent w-full text-lg"
+                    disabled={loading}
+                  >
+                    {loading ? "Creating" : "Create"}
+                  </button>
                 </div>
               </form>
             </div>
