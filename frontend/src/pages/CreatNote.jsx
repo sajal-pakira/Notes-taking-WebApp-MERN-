@@ -25,7 +25,7 @@ const CreateNote = () => {
                   <label className="label">
                     <span className="label-text">Title</span>
                   </label>
-                  <input type="text" placeholder="Enter Note Titles" />
+                  <input type="text" placeholder="Enter Note Title" />
                 </div>
               </form>
             </div>
