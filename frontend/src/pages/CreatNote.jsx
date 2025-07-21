@@ -26,6 +26,8 @@ const CreateNote = () => {
       toast.success("Note created successfully");
       navigate("/");
     } catch (error) {
+      console.log("Error creating Note :- ", error);
+      toast.error("Failed to create Note!");
     } finally {
       setLoading(false);
     }
