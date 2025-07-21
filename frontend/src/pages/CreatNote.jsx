@@ -7,7 +7,10 @@ const CreateNote = () => {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(title);
+  };
 
   return (
     <div className="min-h-screen bg-base-200">
