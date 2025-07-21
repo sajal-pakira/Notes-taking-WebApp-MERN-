@@ -46,6 +46,7 @@ const CreateNote = () => {
                     onChange={(event) => setContent(event.target.value)}
                   />
                 </div>
+                <div className="card-actions justify-end"></div>
               </form>
             </div>
           </div>
