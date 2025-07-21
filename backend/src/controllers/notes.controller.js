@@ -54,7 +54,7 @@ export const updateNote = async (req, res) => {
 
     if (!updatedNote) {
       return res.status(500).json({
-        message: "Can not update note, Please try again later",
+        message: "Can not update note, Please try again",
         success: false,
       });
     }
