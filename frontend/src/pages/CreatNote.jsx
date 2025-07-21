@@ -21,7 +21,11 @@ const CreateNote = () => {
             <div className="card-body">
               <h2 className="card-title text-2xl mb-4">Create New Note</h2>
               <form onSubmit={handleSubmit}>
-                <div></div>
+                <div className="form-control mb-4">
+                  <label className="label">
+                    <span className="label-text">Title</span>
+                  </label>
+                </div>
               </form>
             </div>
           </div>
