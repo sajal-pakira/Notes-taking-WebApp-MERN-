@@ -46,7 +46,9 @@ const CreateNote = () => {
                     onChange={(event) => setContent(event.target.value)}
                   />
                 </div>
-                <div className="card-actions justify-end"></div>
+                <div className="card-actions justify-center">
+                  <button className="btn btn-outline btn-accent">Create</button>
+                </div>
               </form>
             </div>
           </div>
