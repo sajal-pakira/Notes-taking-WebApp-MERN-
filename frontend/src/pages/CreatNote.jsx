@@ -27,7 +27,14 @@ const CreateNote = () => {
       navigate("/");
     } catch (error) {
       console.log("Error creating Note :- ", error);
-      toast.error("Failed to create Note!");
+      if (error.response.status === 429) {
+        toast.error("Slow down! You're creating notes too fast", {
+          duration: 4000,
+          icon: "🤦‍♂️",
+        });
+      } else {
+        toast.error("Failed to create Note!");
+      }
     } finally {
       setLoading(false);
     }
