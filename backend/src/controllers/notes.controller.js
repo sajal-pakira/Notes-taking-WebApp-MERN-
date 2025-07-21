@@ -41,14 +41,20 @@ export const updateNote = async (req, res) => {
       res.send("Title or content must be given to update");
     }
     const note = await Note.findById(req.params.id);
-    const updatedNote = await note.updateOne({
+    if (!note) {
+      return res.status(404).json({
+        success: false,
+        message: "Note is not found with this id",
+      });
+    }
+    const updatedNote = await Note.findByIdAndUpdate(req.params.id, {
       title,
       content,
     });
 
     if (!updatedNote) {
-      res.status(404).json({
-        message: "title or content not found or userid is not given",
+      return res.status(500).json({
+        message: "Can not update note, Please try again later",
         success: false,
       });
     }
@@ -59,7 +65,7 @@ export const updateNote = async (req, res) => {
       updatedNote,
     });
   } catch (err) {
-    console.log("error in updateNote controller :- ", err);
+    console.log("Error in updateNote controller :- ", err);
     res.status(500).json({
       success: false,
       message: "Internal server error",
