@@ -2,17 +2,29 @@ import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const CreateNote = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!title.trim() || !content.trim()) {
       toast.error("All fiels are required");
       return;
+    }
+    setLoading(true);
+    try {
+      await axios.post("http://localhost:5001/api/notes", {
+        title,
+        content,
+      });
+      toast.success("Note created successfully");
+    } catch (error) {
+    } finally {
+      setLoading(false);
     }
   };
 
