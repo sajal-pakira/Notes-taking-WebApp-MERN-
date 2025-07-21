@@ -29,6 +29,8 @@ const CreateNote = () => {
                     className="input input-bordered"
                     type="text"
                     placeholder="Enter Note Title"
+                    value={title}
+                    onChange={(event) => setTitle(event.target.value)}
                   />
                 </div>
               </form>
