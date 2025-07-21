@@ -14,7 +14,7 @@ const NoteCard = ({ note }) => {
           <span className="text-sm text-base-content/60">{note.createdAt}</span>
           <div className="flex gap-1 items-center">
             <SquarePenIcon className="size-4" />
-            <button>
+            <button className="btn btn-ghost btn-xs text-error">
               <Trash2 className="size-4 text-red-600" />
             </button>
           </div>
