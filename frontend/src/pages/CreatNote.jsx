@@ -33,6 +33,19 @@ const CreateNote = () => {
                     onChange={(event) => setTitle(event.target.value)}
                   />
                 </div>
+
+                <div className="form-control mb-4">
+                  <label className="label">
+                    <span className="label-text">Content</span>
+                  </label>
+                  <input
+                    className="input input-bordered"
+                    type="text"
+                    placeholder="Write your Note content here..."
+                    value={content}
+                    onChange={(event) => setContent(event.target.value)}
+                  />
+                </div>
               </form>
             </div>
           </div>
