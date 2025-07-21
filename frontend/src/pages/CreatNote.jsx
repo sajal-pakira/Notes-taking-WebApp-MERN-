@@ -17,6 +17,11 @@ const CreateNote = () => {
             <ArrowLeft className="size-5" />
             Back to Notes
           </Link>
+          <div className="card bg-base-100">
+            <div className="card-body">
+              <h2 className="card-title text-2xl"></h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
