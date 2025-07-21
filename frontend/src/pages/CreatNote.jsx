@@ -14,7 +14,7 @@ const CreateNote = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!title.trim() || !content.trim()) {
-      toast.error("All fiels are required");
+      toast.error("All fields are required");
       return;
     }
     setLoading(true);
