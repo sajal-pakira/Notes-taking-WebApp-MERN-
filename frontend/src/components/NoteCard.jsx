@@ -12,10 +12,10 @@ const NoteCard = ({ note }) => {
         <p className="text-base-content/70 line-clamp-3">{note.content}</p>
         <div className="card-actions flex justify-between items-center mt-4">
           <span className="text-sm text-base-content/60">{note.createdAt}</span>
-          <div>
+          <div className="flex gap-1 items-center">
             <SquarePenIcon className="size-4" />
             <button>
-              <Trash2 className="size-4" />
+              <Trash2 className="size-4 text-red-600" />
             </button>
           </div>
         </div>
