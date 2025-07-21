@@ -38,7 +38,7 @@ const CreateNote = () => {
                   <label className="label">
                     <span className="label-text">Content</span>
                   </label>
-                  <input
+                  <textarea
                     className="input input-bordered"
                     type="text"
                     placeholder="Write your Note content here..."
