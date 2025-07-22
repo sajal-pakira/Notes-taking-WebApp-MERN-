@@ -14,7 +14,7 @@ const NoteCard = ({ note }) => {
       toast.success("Note deleted successfully");
     } catch (error) {
       console.log("Error in handleDelete function :- ", error);
-      toast.error("Failed to delete");
+      toast.error("Failed to delete note");
     }
   };
 
