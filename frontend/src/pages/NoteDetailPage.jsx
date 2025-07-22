@@ -18,6 +18,8 @@ const NoteDetailPage = () => {
         console.log("Response :- ", res.data);
         setNotes(res.data.note);
       } catch (error) {
+        console.log("Error in fetching notes :- ", error);
+
         toast.error("Failed to fetch notes");
       } finally {
         setLoading(false);
