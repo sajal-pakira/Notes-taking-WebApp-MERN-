@@ -10,7 +10,13 @@ const NoteDetailPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchNotes = async () => {};
+    const fetchNotes = async () => {
+      try {
+      } catch (error) {
+      } finally {
+        setLoading(false);
+      }
+    };
     fetchNotes();
   }, [id]);
 
