@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 
 const NoteDetailPage = () => {
@@ -8,6 +8,10 @@ const NoteDetailPage = () => {
 
   const navigate = useNavigate();
   const { id } = useParams();
+
+  useEffect(() => {
+    const fetchNotes = async () => {};
+  }, [id]);
 
   return <div>NoteDetailPage</div>;
 };
