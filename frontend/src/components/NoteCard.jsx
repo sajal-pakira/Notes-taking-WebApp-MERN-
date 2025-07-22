@@ -3,6 +3,8 @@ import { SquarePenIcon, Trash2 } from "lucide-react";
 import { formatDate } from "../lib/utils.js";
 
 const NoteCard = ({ note }) => {
+  const handleDelete = async (e, id) => {};
+
   return (
     <Link
       to={`/note/${note._id}`}
@@ -12,10 +14,15 @@ const NoteCard = ({ note }) => {
         <h3 className="card-title text-base-content">{note.title}</h3>
         <p className="text-base-content/70 line-clamp-3">{note.content}</p>
         <div className="card-actions flex justify-between items-center mt-4">
-          <span className="text-sm text-base-content/60">{formatDate(new Date(note.createdAt))}</span>
+          <span className="text-sm text-base-content/60">
+            {formatDate(new Date(note.createdAt))}
+          </span>
           <div className="flex gap-1 items-center">
             <SquarePenIcon className="size-4" />
-            <button className="btn btn-ghost btn-xs text-error">
+            <button
+              onClick={(e) => handleDelete(e, note._id)}
+              className="btn btn-ghost btn-xs text-error"
+            >
               <Trash2 className="size-4 text-red-600" />
             </button>
           </div>
