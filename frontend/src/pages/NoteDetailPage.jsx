@@ -13,7 +13,8 @@ const NoteDetailPage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        await api.get(`/notes/${id}`);
+        const res = await api.get(`/notes/${id}`);
+        console.log(res.data);
       } catch (error) {
       } finally {
         setLoading(false);
