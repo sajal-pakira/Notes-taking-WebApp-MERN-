@@ -3,7 +3,9 @@ import { SquarePenIcon, Trash2 } from "lucide-react";
 import { formatDate } from "../lib/utils.js";
 
 const NoteCard = ({ note }) => {
-  const handleDelete = async (e, id) => {};
+  const handleDelete = async (e, id) => {
+    e.preventDefault();
+  };
 
   return (
     <Link
