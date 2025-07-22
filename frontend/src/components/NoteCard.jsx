@@ -11,7 +11,7 @@ const NoteCard = ({ note }) => {
 
     try {
       await api.delete(`/notes/${id}`);
-      toast.success("Notes deleted successfully");
+      toast.success("Note deleted successfully");
     } catch (error) {}
   };
 
