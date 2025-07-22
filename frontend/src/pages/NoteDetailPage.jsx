@@ -11,6 +11,7 @@ const NoteDetailPage = () => {
 
   useEffect(() => {
     const fetchNotes = async () => {};
+    fetchNotes();
   }, [id]);
 
   return <div>NoteDetailPage</div>;
