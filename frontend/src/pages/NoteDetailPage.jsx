@@ -28,6 +28,8 @@ const NoteDetailPage = () => {
     fetchNotes();
   }, [id]);
 
+  console.log(notes);
+
   return <div>NoteDetailPage</div>;
 };
 
