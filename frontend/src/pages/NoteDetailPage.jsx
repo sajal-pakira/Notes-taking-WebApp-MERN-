@@ -44,9 +44,13 @@ const NoteDetailPage = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-6">
           <Link to={"/"} className="btn btn-ghost">
-            <ArrowLeft />
+            <ArrowLeft className="h-5 w-5" />
             Back to Notes
           </Link>
+          <button
+            onClick={handleDelete}
+            className="btn btn-error btn-outline"
+          ></button>
         </div>
       </div>
     </div>
