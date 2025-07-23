@@ -43,7 +43,7 @@ const NoteDetailPage = () => {
     <div className="min-h-screen bg-base-200 flex items-center justify-center">
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-6">
-          <Link>
+          <Link to={"/"} className="btn btn-ghost">
             <ArrowLeft />
             Back to Notes
           </Link>
