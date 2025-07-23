@@ -64,7 +64,11 @@ const NoteDetailPage = () => {
                 <label className="label">
                   <span className="label-text">Title</span>
                 </label>
-                <input type="text" placeholder="Note Title" />
+                <input
+                  type="text"
+                  placeholder="Note Title"
+                  className="input input-bordered"
+                />
               </div>
             </div>
           </div>
