@@ -7,7 +7,7 @@ import { ArrowLeft, Trash2Icon } from "lucide-react";
 const NoteDetailPage = () => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [notes, setNotes] = useState(null);
+  const [note, setNote] = useState(null);
 
   const navigate = useNavigate();
   const { id } = useParams();
@@ -18,7 +18,7 @@ const NoteDetailPage = () => {
       try {
         const res = await api.get(`/notes/${id}`);
         console.log("Response :- ", res.data);
-        setNotes(res.data.note);
+        setNote(res.data.note);
       } catch (error) {
         console.log("Error in fetching notes :- ", error);
 
@@ -30,7 +30,7 @@ const NoteDetailPage = () => {
     fetchNotes();
   }, [id]);
 
-  console.log(notes);
+  console.log(note);
 
   if (loading) {
     return (
@@ -68,6 +68,8 @@ const NoteDetailPage = () => {
                   type="text"
                   placeholder="Note Title"
                   className="input input-bordered"
+                  value={note.title}
+                  onChange={(e) => setNote({ ...note, title: e.target.value })}
                 />
               </div>
             </div>
