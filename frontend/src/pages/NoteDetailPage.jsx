@@ -86,6 +86,10 @@ const NoteDetailPage = () => {
                   }
                 />
               </div>
+
+              <div className="card-actions">
+                <button></button>
+              </div>
             </div>
           </div>
         </div>
