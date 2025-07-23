@@ -30,7 +30,7 @@ const NoteDetailPage = () => {
 
   console.log(notes);
 
-  if (true) {
+  if (loading) {
     return (
       <div className="min-h-screen bg-base-200 flex items-center justify-center">
         <LoaderIcon size={60} className="animate-spin " />
