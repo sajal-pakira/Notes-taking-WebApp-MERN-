@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import api from "../lib/axios";
 import toast, { LoaderIcon } from "react-hot-toast";
+import { ArrowLeft } from "lucide-react";
 
 const NoteDetailPage = () => {
   const [loading, setLoading] = useState(true);
@@ -41,7 +42,12 @@ const NoteDetailPage = () => {
   return (
     <div className="min-h-screen bg-base-200 flex items-center justify-center">
       <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-between mb-6"></div>
+        <div className="flex items-center justify-between mb-6">
+          <Link>
+            <ArrowLeft />
+            Back to Notes
+          </Link>
+        </div>
       </div>
     </div>
   );
