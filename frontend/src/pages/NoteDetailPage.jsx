@@ -12,6 +12,7 @@ const NoteDetailPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  const handleDelete = async () => {};
   useEffect(() => {
     const fetchNotes = async () => {
       try {
