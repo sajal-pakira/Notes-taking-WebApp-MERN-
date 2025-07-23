@@ -94,7 +94,9 @@ const NoteDetailPage = () => {
                   className="btn btn-primary"
                   disabled={saving}
                   onClick={handleSave}
-                ></button>
+                >
+                  {saving ? "Saving.." : "Save Changes"}
+                </button>
               </div>
             </div>
           </div>
