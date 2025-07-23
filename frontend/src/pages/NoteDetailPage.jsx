@@ -38,7 +38,11 @@ const NoteDetailPage = () => {
     );
   }
 
-  return <div>NoteDetailPage</div>;
+  return (
+    <div className="min-h-screen bg-base-200 flex items-center justify-center">
+      <div className="container mx-auto px-4 py-8"></div>
+    </div>
+  );
 };
 
 export default NoteDetailPage;
