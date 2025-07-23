@@ -57,6 +57,8 @@ const NoteDetailPage = () => {
               Delete Note
             </button>
           </div>
+
+          <div className="card bg-base-100"></div>
         </div>
       </div>
     </div>
