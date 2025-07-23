@@ -58,7 +58,11 @@ const NoteDetailPage = () => {
             </button>
           </div>
 
-          <div className="card bg-base-100"></div>
+          <div className="card bg-base-100">
+            <div className="card-body">
+              <div className="form-control mb-4"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
