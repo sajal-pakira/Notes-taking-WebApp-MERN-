@@ -72,6 +72,18 @@ const NoteDetailPage = () => {
                   onChange={(e) => setNote({ ...note, title: e.target.value })}
                 />
               </div>
+
+              <div className="form-control mb-4">
+                <label className="label">
+                  <span className="label-text">Content</span>
+                </label>
+                <textarea
+                  placeholder="Note Title"
+                  className="input input-bordered h-32"
+                  value={note.content}
+                  onChange={(e) => setNote({ ...note, title: e.target.value })}
+                />
+              </div>
             </div>
           </div>
         </div>
