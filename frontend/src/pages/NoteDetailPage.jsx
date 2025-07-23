@@ -81,7 +81,9 @@ const NoteDetailPage = () => {
                   placeholder="Note Title"
                   className="input input-bordered h-32"
                   value={note.content}
-                  onChange={(e) => setNote({ ...note, title: e.target.value })}
+                  onChange={(e) =>
+                    setNote({ ...note, content: e.target.value })
+                  }
                 />
               </div>
             </div>
