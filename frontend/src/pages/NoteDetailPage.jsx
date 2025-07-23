@@ -60,7 +60,9 @@ const NoteDetailPage = () => {
 
           <div className="card bg-base-100">
             <div className="card-body">
-              <div className="form-control mb-4"></div>
+              <div className="form-control mb-4">
+                <label className="label"></label>
+              </div>
             </div>
           </div>
         </div>
