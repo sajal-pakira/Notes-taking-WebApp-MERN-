@@ -13,6 +13,8 @@ const NoteDetailPage = () => {
   const { id } = useParams();
 
   const handleDelete = async () => {};
+  const handleSave = async () => {};
+
   useEffect(() => {
     const fetchNotes = async () => {
       try {
@@ -88,7 +90,11 @@ const NoteDetailPage = () => {
               </div>
 
               <div className="card-actions">
-                <button></button>
+                <button
+                  className="btn btn-primary"
+                  disabled={saving}
+                  onClick={handleSave}
+                ></button>
               </div>
             </div>
           </div>
