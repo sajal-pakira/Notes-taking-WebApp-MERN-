@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import api from "../lib/axios";
-import toast from "react-hot-toast";
+import toast, { LoaderIcon } from "react-hot-toast";
 
 const NoteDetailPage = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +29,14 @@ const NoteDetailPage = () => {
   }, [id]);
 
   console.log(notes);
+
+  if (true) {
+    return (
+      <div className="min-h-screen bg-base-200 flex items-center justify-center">
+        <LoaderIcon size={60} className="animate-spin " />
+      </div>
+    );
+  }
 
   return <div>NoteDetailPage</div>;
 };
