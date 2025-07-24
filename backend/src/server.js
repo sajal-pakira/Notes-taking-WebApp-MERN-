@@ -18,7 +18,7 @@ const __dirname = path.resolve();
 app.use(cors());
 app.use(express.json()); // it parse json
 app.use(rateLimiter);
-app.use(express.static(path.join()));
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 //custom middleware
 // app.use((req, res, next) => {
@@ -27,6 +27,9 @@ app.use(express.static(path.join()));
 // });
 
 app.use("/api/notes", notesRoutes);
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend", "dist","index.html"));
+});
 
 connectDB().then(() => {
   app.listen(port, () => {
