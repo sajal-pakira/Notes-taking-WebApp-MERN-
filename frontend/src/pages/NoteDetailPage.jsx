@@ -28,6 +28,8 @@ const NoteDetailPage = () => {
       toast.error("Please add a content and title");
       return;
     }
+    setSaving(true)
+    
   };
 
   useEffect(() => {
