@@ -18,7 +18,9 @@ const NoteDetailPage = () => {
       await api.delete(`/notes/${id}`);
       toast.success("Delted successfully");
       navigate("/");
-    } catch (error) {}
+    } catch (error) {
+      console.log("Error in handleDelete function :- ", error);
+    }
   };
   const handleSave = async () => {};
 
