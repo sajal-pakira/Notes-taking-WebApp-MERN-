@@ -12,7 +12,9 @@ const NoteDetailPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const handleDelete = async () => {};
+  const handleDelete = async () => {
+    if (!window.confirm("Are you sure to delete this note?")) return;
+  };
   const handleSave = async () => {};
 
   useEffect(() => {
