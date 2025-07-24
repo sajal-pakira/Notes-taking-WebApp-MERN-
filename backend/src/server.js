@@ -11,6 +11,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5001;
+const __dirname = path.resolve();
 // console.log(process.env.MONGO_URI);
 
 //Middleware
