@@ -20,6 +20,7 @@ const NoteDetailPage = () => {
       navigate("/");
     } catch (error) {
       console.log("Error in handleDelete function :- ", error);
+      toast.error("Failed to delete");
     }
   };
   const handleSave = async () => {};
