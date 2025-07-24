@@ -14,6 +14,9 @@ const NoteDetailPage = () => {
 
   const handleDelete = async () => {
     if (!window.confirm("Are you sure to delete this note?")) return;
+    try {
+      await api.delete(`/notes/${id}`);
+    } catch (error) {}
   };
   const handleSave = async () => {};
 
