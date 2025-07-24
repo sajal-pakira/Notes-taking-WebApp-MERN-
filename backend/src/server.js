@@ -15,7 +15,9 @@ const __dirname = path.resolve();
 // console.log(process.env.MONGO_URI);
 
 //Middleware
-app.use(cors());
+if (process.env.NODE_ENV !== "production") {
+  app.use(cors());
+}
 app.use(express.json()); // it parse json
 app.use(rateLimiter);
 
