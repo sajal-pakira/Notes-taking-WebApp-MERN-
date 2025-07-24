@@ -23,7 +23,12 @@ const NoteDetailPage = () => {
       toast.error("Failed to delete");
     }
   };
-  const handleSave = async () => {};
+  const handleSave = async () => {
+    if (!note.title.trim() || !note.content.trim()) {
+      toast.error("Please add a content and title");
+      return;
+    }
+  };
 
   useEffect(() => {
     const fetchNotes = async () => {
