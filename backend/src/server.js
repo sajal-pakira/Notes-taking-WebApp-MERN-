@@ -17,6 +17,7 @@ const port = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json()); // it parse json
 app.use(rateLimiter);
+app.use(express.static(path.join()));
 
 //custom middleware
 // app.use((req, res, next) => {
