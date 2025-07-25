@@ -2,7 +2,8 @@
 
 A full-stack note-taking web application built with the MERN stack, featuring rate limiting, toast notifications, loaders, and clean routing. ThinkBoard helps you write, manage, and access your notes efficiently.
 
-🔗 **Live Demo:** https://notes-taking-app-sajal-pakira.onrender.com/  
+🔗 **Live Demo:** https://notes-taking-app-sajal-pakira.onrender.com/  (sometmes it takes 50 seconds to open)
+
 📁 **Repo:** [https://github.com/sajal-pakira/ThinkBoard-MERN](https://github.com/sajal-pakira/ThinkBoard-MERN)
 
 ---
@@ -67,3 +68,9 @@ ThinkBoard-MERN/
 git clone https://github.com/sajal-pakira/ThinkBoard-MERN.git
 cd ThinkBoard-MERN
 ```
+## 🙌 Author 
+SAJAL PAKIRA
+
+🌐 **Portfolio** : https://sajalpakiraj60uisou.contra.com
+
+📸 **Instagram** : https://www.instagram.com/sajal_pakira
